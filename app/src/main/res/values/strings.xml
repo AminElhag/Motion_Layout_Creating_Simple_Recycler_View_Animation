@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Motion Layout Creating Simple Recycler View Animation</string>
+    <string name="show_food_img">Show food img</string>
+    <string name="spice">spice</string>
+    <string name="rating">rating</string>
 </resources>

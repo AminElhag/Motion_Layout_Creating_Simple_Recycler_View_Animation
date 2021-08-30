@@ -2,27 +2,26 @@ package sd.lemon.motionlayoutcreatingsimplerecyclerviewanimation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
-    private var itemsAdapter:ItemsAdapter = ItemsAdapter()
-    private lateinit var recyclerView:RecyclerView
+    private var itemsAdapter: ItemsAdapter = ItemsAdapter()
+    private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         itemsAdapter.setData(foodDummyData)
-        recyclerView=findViewById(R.id.rvMain)
-        recyclerView.layoutManager=LinearLayoutManager(this)
-        recyclerView.adapter=itemsAdapter
+        recyclerView = findViewById(R.id.rvMain)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = itemsAdapter
     }
 
 
-    val foodDummyData: ArrayList<FoodModel> = arrayListOf(
+    private val foodDummyData: ArrayList<FoodModel> = arrayListOf(
         FoodModel(
             "Salmon Salad",
             "One of the easiest equations for a wholesome meal is vegetables + salmon. Both are packed with nutrients like protein, healthy fats, and fiber that just make you feel good with every single bite, and this simple recipe is proof",

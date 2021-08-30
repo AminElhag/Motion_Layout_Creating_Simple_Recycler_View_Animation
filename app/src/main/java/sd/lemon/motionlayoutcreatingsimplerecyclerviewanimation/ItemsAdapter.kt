@@ -1,5 +1,6 @@
 package sd.lemon.motionlayoutcreatingsimplerecyclerviewanimation
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,12 +38,11 @@ class ItemsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         val tvTitle: TextView = view.findViewById(R.id.tvTitle)
         val tvDescription: TextView = view.findViewById(R.id.tvDescription)
         val tvCalories: TextView = view.findViewById(R.id.tvCalories)
-        val imageView6: ImageView = view.findViewById(R.id.imageView6)
-        val imageView7: ImageView = view.findViewById(R.id.imageView7)
         val tvRate: TextView = view.findViewById(R.id.tvRate)
     }
 
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setData(data: ArrayList<FoodModel>) {
         this.items.clear()
         notifyDataSetChanged()
